@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+    mode: 'development',
     output: {
         path: path.join(__dirname, "/dist"), // the bundle output path
         filename: "bundle.js", // the name of the bundle
@@ -12,7 +13,13 @@ module.exports = {
         }),
     ],
     devServer: {
-        port: 3000, // you can change the port
+        port: '3000',
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
+        open: true,
+        hot: true,
+        liveReload: true,// you can change the port
     },
     module: {
         rules: [
@@ -25,7 +32,7 @@ module.exports = {
             },
             {
                 test: /\.(sa|sc|c)ss$/, // styles files
-                use: ["style-loader", "css-loader", "sass-loader"],
+                use: ["style-loader", "css-loader", "sass-loader","postcss-loader"],
             },
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/, // to import images and fonts
