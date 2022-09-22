@@ -1,7 +1,15 @@
 import React from "react";
+import Banner from "./components/welcome/Banner";
+
 
 const App = () => {
-        return <h1 className="bg-gray-300 text-primary text-4xl font-bold">Hello world! I am using React with Tailwind CSS</h1>
+
+    return (
+        <>
+            <Banner/>
+        </>
+    );
+
 };
 
 export default App;
