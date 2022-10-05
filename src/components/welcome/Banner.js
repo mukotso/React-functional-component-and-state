@@ -42,7 +42,8 @@ const BannerPage = () => {
                 functional Components, the return value is the JSX code to render to the DOM tree.
             </p>
 
-            <ReactHooks/>
+            <h2>React Hooks</h2>
+           <ReactHooks/>
 
             <button onClick={handleClick}
                     className={"bg-primary hover:bg-white hover:text-black hover:bg-green-200  text-white rounded p-2 flex justify-center"}>

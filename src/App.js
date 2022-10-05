@@ -6,7 +6,10 @@ const App = () => {
 
     return (
         <>
-            <Banner/>
+            <div style={{padding:30}}>
+                <Banner/>
+            </div>
+
         </>
     );
 
